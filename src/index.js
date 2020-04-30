@@ -17,7 +17,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/search" render={props => <SearchPage {...props} />} />
-      <Route path="/results" render={props => <ResultsPage {...props} />} />
+      <Route path="/results/:word" render={props => <ResultsPage {...props} />} />
       <Redirect to="/search" />
     </Switch>
   </BrowserRouter>,

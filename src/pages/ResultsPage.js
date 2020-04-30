@@ -6,6 +6,21 @@ import SearchBars from '../components/search/SearchBars';
 import CardsResults from '../components/results/CardsResults';
 
 export default class ResultsPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { query: "" , amount: 0 };
+  }
+
+  componentDidMount() {
+    this.getQuery();
+  }
+
+  getQuery() {
+    const {match: { params }} = this.props;
+    this.setState({query: params.word});
+    this.setState({amount: params.word.length});
+  }
+
 	render() {
 		return(
 			<>
@@ -16,7 +31,7 @@ export default class ResultsPage extends Component {
                 <br/>
                 <SearchBars/>
                 <div className="title-brand">
-                    <h2 className="title">Found 5 matches to "styrofoam"</h2>
+                    <h2 className="title">Found {this.state.amount} matches to <cite title="Source Title">"{this.state.query}"</cite></h2>
                 </div>
                 <CardsResults/>
             </Container>

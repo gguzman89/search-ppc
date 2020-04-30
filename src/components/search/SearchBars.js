@@ -24,7 +24,7 @@ class SearchBars extends Component {
 	}
 
 	redirectSearch() {
-		this.props.history.push("/results");
+		this.props.history.push("/results/" + this.state.word);
 	}
 
 	render() {
