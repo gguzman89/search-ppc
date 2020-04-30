@@ -8,7 +8,7 @@ import "./assets/css/bootstrap.min.css";
 import "./assets/css/paper-kit.css";
 import "./assets/demo/demo.css";
 // pages
-import Index from "./views/Index.js";
+// import Index from "./views/Index.js";
 // import NucleoIcons from "./views/NucleoIcons.js";
 // import LandingPage from "./views/examples/LandingPage.js";
 // import ProfilePage from "./views/examples/ProfilePage.js";
@@ -20,7 +20,7 @@ import ResultsPage from "./pages/ResultsPage";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/index" render={props => <Index {...props} />} />
+      {/* <Route path="/index" render={props => <Index {...props} />} /> */}
       <Route path="/search" render={props => <SearchPage {...props} />} />
       <Route path="/results" render={props => <ResultsPage {...props} />} />
       {/* <Route
@@ -39,7 +39,7 @@ ReactDOM.render(
         path="/register-page"
         render={props => <RegisterPage {...props} />}
       /> */}
-      <Redirect to="/index" />
+      <Redirect to="/search" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

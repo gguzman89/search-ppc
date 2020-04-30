@@ -11,27 +11,27 @@ export default class CardsResults extends Component {
 			<>
 				<Card>
 					<CardBody>
-						Marshall Islands prohibit the importation, manufacturing, sale and distribution of styrofoam cups and plates, disposable plastic cups and plates, and plastic shopping bags.
+						<h6> Marshall Islands prohibit the importation, manufacturing, sale and distribution of styrofoam cups and plates, disposable plastic cups and plates, and plastic shopping bags.</h6>
 					</CardBody>
 				</Card>
 				<Card>
 					<CardBody>
-						Marshall Islands prohibit the importation, manufacturing, sale and distribution of styrofoam cups and plates, disposable plastic cups and plates, and plastic shopping bags.
+					<h6>Marshall Islands prohibit the importation, manufacturing, sale and distribution of styrofoam cups and plates, disposable plastic cups and plates, and plastic shopping bags.</h6>
 					</CardBody>
 				</Card>
 				<Card>
 					<CardBody>
-						Disposable Foam Container Toolkit – NRCM
+					<h6>Disposable Foam Container Toolkit – NRCM</h6>
 					</CardBody>
 				</Card>
 				<Card>
 					<CardBody>
-						Disposable Foam Container Toolkit by Natural Resources Council of Maine
+					<h6>Disposable Foam Container Toolkit by Natural Resources Council of Maine</h6>
 					</CardBody>
 				</Card>
 				<Card>
 					<CardBody>
-						Disposable Foam Container Toolkit - NRCM
+					<h6>Disposable Foam Container Toolkit - NRCM</h6>
 					</CardBody>
 				</Card>
 			</>
