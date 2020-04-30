@@ -5,30 +5,17 @@ import { Container } from 'reactstrap';
 import SearchBars from '../components/search/SearchBars';
 
 export default class SearchPage extends Component {
-    render() {
-        return(
-            <>
-                {/* navbar */}
-                {/* <div className="page-header section-dark"> */}
-                    <div className="filter"/>
-                    <div className="content-center mt-0"/>
-                        <Container>
-                            <div className="title-brand">
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                            </div>
-                            <SearchBars/>
-                        </Container>
-                {/* </div> */}
-            </>
-        )
-    }
+  render() {
+      return(
+          <>
+            {/* navbar */}
+            <div className="content-center mt-0"/>
+                <Container fluid>
+                  <br/>
+                  <br/>
+                  <SearchBars/>
+                </Container>
+          </>
+      )
+  }
 }

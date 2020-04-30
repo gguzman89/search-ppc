@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import {
-    Container,
-    Col,
-    InputGroup,
-    Input,
-    Button
+  Container,
+  Col,
+  InputGroup,
+  Input,
+  Button,
+	Row
 } from 'reactstrap'
 import { withRouter } from 'react-router-dom';
 
@@ -29,15 +30,17 @@ class SearchBars extends Component {
 	render() {
 		return(
 			<Container>
-				<InputGroup>
-					<Col xs={7}>
-						<InputGroup addontype="append">
-							<Input className="form-control" placeholder="Search" type="text" value={this.state.word} onChange={this.updateInput}/>
-							<Button className="btn btn-danger nc-icon nc-zoom-split" onClick={this.redirectSearch}/>
-							{/* resultados */}
-						</InputGroup>	
-					</Col>		
-				</InputGroup>
+					<Row>
+            <Col className="offset-1 col-md-10 mt-4">
+              <InputGroup addontype="append">
+                <Input className="form-control" placeholder="Search" type="text" value={this.state.word} onChange={this.updateInput}/>
+                <Button variant="outline-secondary" onClick={this.redirectSearch}>
+                <i className="nc-icon nc-zoom-split" />
+                </Button>
+                {/* resultados */}
+              </InputGroup>
+            </Col>
+          </Row>
 			</Container>
 		)
 	}
