@@ -37,7 +37,7 @@ class SearchBars extends Component {
                 <Button variant="outline-secondary" onClick={this.redirectSearch}>
                 <i className="nc-icon nc-zoom-split" />
                 </Button>
-                {/* resultados */}
+                {/* resultados for "styrofoam"*/}
               </InputGroup>
             </Col>
           </Row>

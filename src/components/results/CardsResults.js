@@ -6,49 +6,32 @@ import {
   CardLink
 } from 'reactstrap';
 
+const Result = ({results}) => {
+  return (
+    <Card>
+    <CardBody>
+      <CardLink href="/#/">
+        <h6>{results}</h6>
+      </CardLink>
+    </CardBody>
+  </Card>
+  )
+}
 
-export default class CardsResults extends Component {
+class CardsResults extends Component {
 	render() {
+    const results = this.props.results.map((item, i) =>
+      <Result key={i} results={item.nro} />
+    );
+
 		return(
 			<>
         <Container>
-          <Card>
-            <CardBody>
-              <CardLink href="/#/">
-                <h6> Marshall Islands prohibit the importation, manufacturing, sale and distribution of styrofoam cups and plates, disposable plastic cups and plates, and plastic shopping bags.</h6>
-              </CardLink>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardBody>
-              <CardLink href="/#/">
-                <h6>Marshall Islands prohibit the importation, manufacturing, sale and distribution of styrofoam cups and plates, disposable plastic cups and plates, and plastic shopping bags.</h6>
-              </CardLink>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardBody>
-              <CardLink href="/#/">
-                <h6>Disposable Foam Container Toolkit – NRCM</h6>
-              </CardLink>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardBody>
-              <CardLink href="/#/">
-                <h6>Disposable Foam Container Toolkit by Natural Resources Council of Maine</h6>
-              </CardLink>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardBody>
-              <CardLink href="/#/">
-                <h6>Disposable Foam Container Toolkit - NRCM</h6>
-              </CardLink>
-            </CardBody>
-          </Card>
+          {results}
         </Container>
 			</>
 		)
 	}
 }
+
+export default CardsResults;
