@@ -23,9 +23,14 @@ class CardsResults extends Component {
     const results = this.props.results.map((item, i) =>
       <Result key={i} results={item.nro} />
     );
-
+    const showDiv = this.props.showDiv;
 		return(
 			<>
+        { showDiv &&
+        <div className="title-brand">
+          <h2 className="title">Found {this.props.amount} matches to <cite title="Source Title">"{this.props.searchQuery}"</cite></h2>
+        </div>
+        }
         <Container>
           {results}
         </Container>
